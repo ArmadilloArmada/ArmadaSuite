@@ -1,0 +1,13 @@
+## Interface: 120005
+## Title: Armada Suite
+## Notes: Combined Armada addon suite: hub, alt chores, gear snapshots, gold tracking, and mistake journal.
+## Author: Armada Studios
+## Version: 1.0.0
+## SavedVariables: ArmadaAddonsDB, GearSnapshotDB, AltChoreDashboardDB, GoldWatchDB, MistakeJournalDB
+## Category: Miscellaneous
+
+Modules\ArmadaAddons\Core.lua
+Modules\AltChoreDashboard\Core.lua
+Modules\GearSnapshot\Core.lua
+Modules\GoldWatch\Core.lua
+Modules\MistakeJournal\Core.lua
