@@ -130,7 +130,7 @@ local function CreateHubButton()
     button:SetScript("OnClick", ToggleUI)
     button:SetScript("OnEnter", function(self)
         GameTooltip:SetOwner(self, "ANCHOR_RIGHT")
-        GameTooltip:SetText("|cffffcc00Armada Addons|r")
+        GameTooltip:SetText("|cffffcc00Armada Suite|r")
         GameTooltip:AddLine("Click to open the suite.", 1, 1, 1)
         if not db.hubLocked then
             GameTooltip:AddLine("Drag to move.", 0.7, 0.7, 0.7)
@@ -438,7 +438,7 @@ function CreateUI()
 
     frame.title = frame:CreateFontString(nil, "OVERLAY", "GameFontNormalLarge")
     frame.title:SetPoint("TOPLEFT", 18, -16)
-    frame.title:SetText("|cffffcc00Armada|r Addons")
+    frame.title:SetText("|cffffcc00Armada|r Suite")
 
     frame.subtitle = frame:CreateFontString(nil, "OVERLAY", "GameFontDisableSmall")
     frame.subtitle:SetPoint("TOPLEFT", 18, -36)
@@ -498,7 +498,7 @@ SlashCmdList.ARMADAADDONS = function(msg)
     if string.lower(msg) == "show" then
         db.hubHidden = false
         if ui.hubButton then ui.hubButton:Show() end
-        print("|cffffcc00Armada Addons:|r Hub button shown.")
+        print("|cffffcc00Armada Suite:|r Hub button shown.")
     else
         ToggleUI()
     end
@@ -510,7 +510,7 @@ EventUtil.ContinueOnAddOnLoaded(ADDON_NAME, function()
         CreateUI()
         CreateHubButton()
         if db.loginMessage then
-            print("|cffffcc00Armada Addons:|r Type |cffffff00/armada|r to open the suite.")
+            print("|cffffcc00Armada Suite:|r Type |cffffff00/armada|r to open the suite.")
         end
     end)
 end)
